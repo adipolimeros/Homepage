@@ -1,0 +1,379 @@
+/* =============================
+   LOGO DE LA BARRA DE NAVEGACIÓN
+   ============================= */
+.navbar-brand img {
+    height: 70px; /* Altura del logo */
+}
+
+/* =============================
+   ENLACES DEL MENÚ DE NAVEGACIÓN
+   ============================= */
+.navbar-nav .nav-link {
+    color: #7758B3;      /* Color base */
+    font-weight: bold;   /* Texto en negrita */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.2);     /* Efecto de zoom al pasar el mouse */
+    color: #bebebe;            /* Cambio de color al hacer hover */
+}
+
+/* =============================
+   REDES SOCIALES
+   ============================= */
+.social-icons a {
+    color: #7758B3;       /* Color base de íconos */
+    margin: 0 5px;         /* Separación entre íconos */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #bebebe;        /* Color al pasar el mouse */
+}
+
+.social-icons a i {
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2); /* Zoom suave al pasar el mouse */
+}
+
+/* =============================
+   EFECTO DE OCULTAR NAVBAR (SCROLL)
+   ============================= */
+.navbar {
+    transition: top 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    top: -100px; /* Desplaza hacia arriba para ocultar */
+}
+
+/* =============================
+   ENLACE DE NÚMERO DE TELÉFONO
+   ============================= */
+.d-flex .numero {
+    text-decoration: none; /* Quita el subrayado */
+    color: #333;           /* Color base */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.d-flex .numero:hover {
+    color: #7758B3; /* Cambia a púrpura */
+    text-shadow: 0px 2px 2px #7758B3; /* Sombra de texto */
+}
+
+/* =============================
+   ESTILOS PARA CARRUSEL DE IMÁGENES
+   ============================= */
+
+/* Permite posicionar elementos hijos como .overlay y .fixed-image */
+.carousel-inner {
+    position: relative;
+}
+
+/* Capa oscura semitransparente encima de cada imagen del carrusel */
+.carousel-inner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Negro con 50% opacidad */
+    z-index: 1; /* Se coloca sobre la imagen pero debajo del contenido fijo */
+}
+
+/* Imagen fija sobre cada slide (decorativa o logo) */
+.carousel-inner .fixed-image {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* Estilos para textos posicionados sobre el carrusel */
+.carousel-inner .fixed-content h2,
+.carousel-inner .fixed-content h1,
+.carousel-inner .fixed-content p {
+    margin: 10px 0;
+}
+
+/* Estilo de los enlaces en los textos del carrusel */
+.carousel-inner .fixed-content a {
+    color: #FFD700; /* Dorado */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* ====================================
+   ESTILOS PARTICULARES PARA fixed-image1
+   ==================================== */
+
+
+.fixed-image1 {
+    position: absolute ;
+    transform: translateY(-50%) ;
+    z-index: 15 ;
+    height: 700px ;
+    width: 300px ;
+    justify-content: center ;
+    align-items: center ;
+    display: flex ;
+    margin-left: 350px ;
+}
+
+/* =============================
+   GALERÍA DE IMÁGENES
+   ============================= */
+
+/* Galería en formato de fila con espacio entre imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px; /* Espacio entre las imágenes */
+}
+
+/* Contenedor individual de cada imagen */
+.image-gallery .gallery-item {
+    position: relative;
+    overflow: hidden; /* Oculta el desbordamiento del zoom */
+}
+
+/* Imagen en su estado normal */
+.image-gallery .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Zoom al pasar el mouse sobre la imagen */
+.image-gallery .gallery-item:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+/* Título sobre la imagen, colocado en la parte inferior */
+.image-gallery .gallery-item .title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #7758B3; /* Color de fondo morado */
+    opacity: 0.7;         /* Semitransparente */
+    color: rgb(0, 0, 0);  /* Texto negro */
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+/* Fondo claro para secciones que lo requieran */
+.section-bg {
+    background-color: #f8f9fa;
+}
+
+/* Tarjeta de servicio con diseño llamativo */
+.service-card {
+    background-color: #7758B3; /* Fondo púrpura personalizado */
+    border: 1px solid #7758B3;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto hover para dar vida a la tarjeta */
+.service-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.438); /* Sombra para resaltar */
+}
+
+/* Contenedor circular para íconos */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+
+/* Título dentro de la tarjeta de servicio */
+.service-card h5 {
+    color: #000;
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/* Texto descriptivo dentro de la tarjeta */
+.service-card p {
+    color: #000000;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo del enlace dentro de la tarjeta */
+.service-card a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+/* Estilo de círculo púrpura para íconos */
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Títulos de tarjetas genéricas */
+.card h5 {
+    color: #000;
+}
+
+/* Párrafos de tarjetas genéricas */
+.card p {
+    color: #ffc107; /* Amarillo Bootstrap (Warning) */
+}
+/* Animación personalizada para la carta */
+#carta {
+    transition: transform 0.3s ease !important;
+}
+
+#carta:hover {
+    transform: scale(1.05);
+}
+/* Reasignando clases de Bootstrap con un color personalizado */
+.bg-light {
+    background-color: #7758B3 !important;
+}
+.text-warning {
+    color: #7758B3 !important;
+}
+.text-secondary {
+    color: #7758B3 !important;
+}
+/* Transición al pasar el mouse por el elemento #socios */
+.row #socios {
+    transition: transform 0.3s ease !important;
+}
+
+.row #socios:hover {
+    transform: scale(1.2); /* Aumenta el tamaño */
+    box-shadow: 0px 4px 4px black; /* Sombra para efecto 3D */
+}
+ /* Estilo del botón flotante */
+ .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de escala al pasar el mouse por el botón de WhatsApp */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Primer anillo de animación (onda) detrás del botón */
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #25d366; /* Verde WhatsApp */
+    border-radius: 50%;
+    animation: wave 1.5s infinite ease-out;
+    z-index: -1; /* Por detrás del botón */
+}
+
+/* Segundo anillo de animación con delay para alternar */
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #25d366;
+    border-radius: 50%;
+    animation: wave 1.5s infinite ease-out;
+    animation-delay: 0.5s;
+    z-index: -2;
+}
+
+/* Animación de ondas expansivas */
+@keyframes wave {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Contenedor emergente para el código QR */
+.qr-popup {
+    position: fixed;
+    bottom: 80px; /* Espaciado desde la parte inferior */
+    right: 20px; /* Margen desde el borde derecho */
+    width: 200px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Oculto por defecto */
+    z-index: 999;
+}
+
+/* Imagen del QR adaptada al contenedor */
+.qr-popup img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mostrar el QR al pasar el mouse sobre el botón de WhatsApp */
+.whatsapp-float:hover + .qr-popup {
+    display: block;
+}
+.footer {
+    background-color: #333; /* Gris oscuro */
+    color: #fff;            /* Texto blanco */
+    padding: 20px 0;
+}
+
+/* Enlaces del footer */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Íconos sociales dentro del footer */
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+/* Imagen dentro del footer */
+.footer img {
+    width: 200px;
+    height: 200px;
+}
