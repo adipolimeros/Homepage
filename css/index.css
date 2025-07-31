@@ -68,7 +68,30 @@
 /* =============================
    ESTILOS PARA CARRUSEL DE IMÁGENES
    ============================= */
+.carousel-item {
+    position: relative; /* Necesario para posicionar el logo */
+}
 
+.fixed-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 880px;      /* Cambia este valor para ajustar el tamaño del logo */
+    max-width: 60vw;   /* Para que no se pase en pantallas pequeñas */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* El logo no bloquea clics */
+}
+
+.fixed-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 /* Permite posicionar elementos hijos como .overlay y .fixed-image */
 .carousel-inner {
     position: relative;
@@ -85,14 +108,14 @@
     z-index: 1; /* Se coloca sobre la imagen pero debajo del contenido fijo */
 }
 
-/* Imagen fija sobre cada slide (decorativa o logo) */
+/* Imagen fija sobre cada slide (decorativa o logo) 
 .carousel-inner .fixed-image {
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
     z-index: 2;
-}
+} */
 
 /* Estilos para textos posicionados sobre el carrusel */
 .carousel-inner .fixed-content h2,
@@ -108,63 +131,49 @@
     font-weight: bold;
 }
 
-/* ====================================
-   ESTILOS PARTICULARES PARA fixed-image1
-   ==================================== */
-
-
-.fixed-image1 {
-    position: absolute ;
-    transform: translateY(-50%) ;
-    z-index: 15 ;
-    height: 700px ;
-    width: 300px ;
-    justify-content: center ;
-    align-items: center ;
-    display: flex ;
-    margin-left: 350px ;
+/* Estilos para el carrusel de cards de proyectos */
+.card-carrusel {
+  height: 300px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.2s;
+}
+.card-carrusel .card-img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+.card-carrusel .card-img-overlay {
+  background: rgba(0,0,0,0.45);
+  border-radius: 18px;
+}
+.card-carrusel .card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #f8f8f8;
+  text-shadow: 4px 8px 16px #000;
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté al frente */
+}
+.card-proyecto:hover .card-carrusel {
+  transform: scale(1.04);
+}
+.card-proyecto:hover .card-img {
+  opacity: 1;
 }
 
-/* =============================
-   GALERÍA DE IMÁGENES
-   ============================= */
-
-/* Galería en formato de fila con espacio entre imágenes */
-.image-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px; /* Espacio entre las imágenes */
-}
-
-/* Contenedor individual de cada imagen */
-.image-gallery .gallery-item {
-    position: relative;
-    overflow: hidden; /* Oculta el desbordamiento del zoom */
-}
-
-/* Imagen en su estado normal */
-.image-gallery .gallery-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; /* Transición suave al hacer hover */
-}
-
-/* Zoom al pasar el mouse sobre la imagen */
-.image-gallery .gallery-item:hover img {
-    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
-}
-
-/* Título sobre la imagen, colocado en la parte inferior */
-.image-gallery .gallery-item .title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #7758B3; /* Color de fondo morado */
-    opacity: 0.7;         /* Semitransparente */
-    color: rgb(0, 0, 0);  /* Texto negro */
-    text-align: center;
-    padding: 5px 0;
-    font-weight: bold;
+/* Responsivo para móvil */
+@media (max-width: 767px) {
+  .card-carrusel {
+    height: 200px;
+  }
+  .card-carrusel .card-title {
+    font-size: 1.1rem;
+  }
 }
 
 /* Fondo claro para secciones que lo requieran */
@@ -263,67 +272,7 @@
 
 .row #socios:hover {
     transform: scale(1.2); /* Aumenta el tamaño */
-    box-shadow: 0px 4px 4px black; /* Sombra para efecto 3D */
-}
- /* Estilo del botón flotante */
- .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto de escala al pasar el mouse por el botón de WhatsApp */
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-/* Primer anillo de animación (onda) detrás del botón */
-.whatsapp-float::before {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 2px solid #25d366; /* Verde WhatsApp */
-    border-radius: 50%;
-    animation: wave 1.5s infinite ease-out;
-    z-index: -1; /* Por detrás del botón */
-}
-
-/* Segundo anillo de animación con delay para alternar */
-.whatsapp-float::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #25d366;
-    border-radius: 50%;
-    animation: wave 1.5s infinite ease-out;
-    animation-delay: 0.5s;
-    z-index: -2;
-}
-
-/* Animación de ondas expansivas */
-@keyframes wave {
-    0% {
-        transform: scale(1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(2.5);
-        opacity: 0;
-    }
-}
+    box-shadow: 0px 4px 4px black; /* Sombra para efecto 3D */}
 
 /* Contenedor emergente para el código QR */
 .qr-popup {

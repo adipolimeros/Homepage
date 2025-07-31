@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="Icon" href="imagen/LOGO.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="js/all.min.js"></script>
     <img src="" alt="">
     <title>Adipolimeros</title>
@@ -127,38 +128,84 @@
     </button>
 </div>
 
-  <!-- Galería de imágenes con títulos superpuestos -->
-<div class="container-fluid mt-5">
-    <div class="image-gallery">
-        <!-- Cada item representa una imagen con su título -->
-        <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 1">
-            <div class="title">Titulo 1</div>
-        </div>
-        <!-- Repetido para los demás elementos -->
-        <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 2">
-            <div class="title">Titulo 2</div>
-        </div>
-        <!-- ... -->
-         <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 3">
-            <div class="title">Titulo 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 4">
-            <div class="title">Titulo 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 5">
-            <div class="title">Titulo 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="imagen/Coworking San Isidro.webp" alt="Gallery 6">
-            <div class="title">Titulo 2</div>
-        </div>
+<!-- Carrusel de proyectos con movimiento continuo -->
+<div class="container my-5">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto1.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Coworking San Isidro</h5>
+            </div>
+            <img src="imagen/Coworking San Isidro - DRRP Urbanova.webp" class="card-img" alt="Proyecto 1">
+          </div>
+        </a>
+      </div>
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto2.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Perusuyo</h5>
+            </div>
+            <img src="imagen/Perusyo - FISA_Mesa de trabajo 1.webp" class="card-img" alt="Proyecto 2">
+          </div>
+        </a>
+      </div>
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto3.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Refugio</h5>
+            </div>
+            <img src="imagen/Refugio_Mesa de trabajo 1.webp" class="card-img" alt="Proyecto 3">
+          </div>
+        </a>
+      </div>
+      <!-- Card 4 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto4.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Proyecto 4</h5>
+            </div>
+            <img src="imagen/Coworking San Isidro - DRRP Urbanova.webp" class="card-img" alt="Proyecto 4">
+          </div>
+        </a>
+      </div>
+      <!-- Card 5 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto5.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Proyecto 5</h5>
+            </div>
+            <img src="imagen/Coworking San Isidro - DRRP Urbanova.webp" class="card-img" alt="Proyecto 5">
+          </div>
+        </a>
+      </div>
+      <!-- Card 6 -->
+      <div class="swiper-slide">
+        <a href="link/proyecto6.html" class="d-block text-decoration-none">
+          <div class="card card-carrusel text-white">
+            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+              <h5 class="card-title text-center w-100">Proyecto 6</h5>
+            </div>
+            <img src="imagen/Coworking San Isidro - DRRP Urbanova.webp" class="card-img" alt="Proyecto 6">
+          </div>
+        </a>
+      </div>
     </div>
+  </div>
 </div>
+<!--
+  - Carrusel de 6 cards con movimiento continuo tipo cinta.
+  - Cada card es clickeable, con imagen de fondo y título centrado.
+  - Cambia los enlaces y las imágenes según tus proyectos.
+-->
 
    <!-- Sección Nosotros con texto e imagen decorativa -->
 <div class="container-fluid5 py-5 bg-light" id="Nosotros">
@@ -336,15 +383,7 @@
             </div>
         </div>
     </div>
-   <!-- Botón flotante de WhatsApp -->
-   <div class="whatsapp-float">
-    <i class="fab fa-whatsapp fa-2x text-white"></i>
-</div>
 
-<!-- QR emergente -->
-<div class="qr-popup">
-    <img src="imagen/Untitled.svg" alt="QR para WhatsApp">
-</div>
 <footer class="footer bg-dark text-white py-4">
     <div class="container">
         <div class="row">
@@ -446,5 +485,26 @@
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Carrusel tipo cinta transportadora
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    speed: 3000, // velocidad de movimiento (ms)
+    autoplay: {
+      delay: 0, // sin pausa entre slides
+      disableOnInteraction: false,
+    },
+    freeMode: true, // movimiento libre y continuo
+    grabCursor: true,
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      576: { slidesPerView: 2 },
+      992: { slidesPerView: 3 }
+    }
+  });
+</script>
 </body>
 </html>
