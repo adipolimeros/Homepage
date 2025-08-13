@@ -50,6 +50,109 @@
 .navbar.hidden {
     top: -100px; /* Desplaza hacia arriba para ocultar */
 }
+/* ==============================
+   MODO OSCURO PERSONALIZABLE
+   ============================== */
+
+/* Fondo general y texto */
+body.dark-mode,
+body.dark-mode .section-bg,
+body.dark-mode .container-fluid,
+body.dark-mode .container-fluid5 {
+  background-color: #181818 !important; /* <-- Fondo principal modo oscuro */
+  color: #f1f1f1 !important;            /* <-- Color texto principal modo oscuro */
+}
+
+/* Navbar, footer, cards, servicios */
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .card,
+body.dark-mode .service-card {
+  background-color: #232323 !important; /* <-- Fondo de navbar, footer y tarjetas modo oscuro */
+  color: #f1f1f1 !important;            /* <-- Color texto en navbar, footer y tarjetas modo oscuro */
+  border-color: #333 !important;        /* <-- Color borde modo oscuro */
+}
+
+/* Títulos y textos */
+body.dark-mode .card-title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h5,
+body.dark-mode p,
+body.dark-mode li {
+  color: #f1f1f1 !important;            /* <-- Color títulos y textos modo oscuro */
+}
+
+/* Botones primarios */
+body.dark-mode .btn-outline-primary {
+  color: #fff !important;               /* <-- Color texto botón modo oscuro */
+  border-color: #7758B3 !important;     /* <-- Color borde botón modo oscuro */
+  background-color: #7758B3 !important; /* <-- Fondo botón modo oscuro */
+}
+
+/* Botones secundarios (puedes personalizar) */
+body.dark-mode .btn-outline-secondary {
+  color: #fff !important;
+  border-color: #444 !important;        /* <-- Color borde botón secundario modo oscuro */
+  background-color: #444 !important;    /* <-- Fondo botón secundario modo oscuro */
+}
+
+/* Enlaces */
+body.dark-mode a {
+  color: #a48be0 !important;            /* <-- Color enlaces modo oscuro */
+}
+body.dark-mode a:hover {
+  color: #fff !important;               /* <-- Color enlaces hover modo oscuro */
+}
+
+/* Iconos sociales */
+body.dark-mode .social-icons a {
+  color: #a48be0 !important;            /* <-- Color iconos sociales modo oscuro */
+}
+body.dark-mode .social-icons a:hover {
+  color: #fff !important;
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background-color: #232323 !important; /* <-- Fondo footer modo oscuro */
+  color: #f1f1f1 !important;
+}
+
+/* Cards de proyectos */
+body.dark-mode .card-carrusel {
+  background-color: #232323 !important; /* <-- Fondo cards carrusel modo oscuro */
+  color: #f1f1f1 !important;
+}
+/* Botón flotante modo oscuro */
+.mode-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  font-size: 2rem;
+  background: #232323; /* <-- Color fondo botón normal */
+  color: #fff;         /* <-- Color icono luna normal */
+  border: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+.mode-toggle-btn:hover {
+  background: #7758B3; /* <-- Color fondo botón hover */
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(119,88,179,0.25);
+}
+.mode-toggle-btn i {
+  pointer-events: none;
+}
 
 /* =============================
    ENLACE DE NÚMERO DE TELÉFONO
@@ -107,15 +210,6 @@
     background: rgba(0, 0, 0, 0.5); /* Negro con 50% opacidad */
     z-index: 1; /* Se coloca sobre la imagen pero debajo del contenido fijo */
 }
-
-/* Imagen fija sobre cada slide (decorativa o logo) 
-.carousel-inner .fixed-image {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    z-index: 2;
-} */
 
 /* Estilos para textos posicionados sobre el carrusel */
 .carousel-inner .fixed-content h2,
@@ -175,7 +269,41 @@
     font-size: 1.1rem;
   }
 }
+/*ajuste de nosotros*/
+.img-nosotros {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+     margin-left: 24px; /* Puedes ajustar el valor según lo que necesites */
+}
+@media (max-width: 767px) {
+    .img-nosotros {
+        margin-left: 0; /* Sin margen en móvil para que se vea bien */
+    }
+}
+@media (max-width: 991.98px) {
+    .metric-box,
+    .metric-right {
+        min-width: 100px;
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        bottom: 10px;
+        left: 10px;
+        right: auto;
+    }
+    .metric-right {
+        left: auto;
+        right: 10px;
+    }
+    .img-nosotros {
+        margin-left: 0 !important;
+    }
+}
 
+/* Espaciado para el texto de la derecha en escritorio */
+.ps-lg-5 {
+    padding-left: 3rem !important;
+}
 /* Fondo claro para secciones que lo requieran */
 .section-bg {
     background-color: #f8f9fa;
