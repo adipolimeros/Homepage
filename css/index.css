@@ -454,3 +454,23 @@ body.dark-mode .card-carrusel {
     width: 200px;
     height: 200px;
 }
+/*Ultimos ajustes seccion nostros*/
+#nosotrosCarousel .carousel-inner img {
+  width: 100%;
+  height: 500px;      /* Ajusta la altura según lo que necesites */
+  object-fit: cover;  /* Recorta la imagen para que llene el espacio */
+  border-radius: 16px;
+}
+
+/*Ajuste de los logos de Empresa*/
+.logosSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logosSwiper .swiper-slide img {
+  max-height: 150px;
+  object-fit: contain;
+  width: auto;
+}
