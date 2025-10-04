@@ -470,7 +470,8 @@ body.dark-mode .card-carrusel {
 }
 
 .logosSwiper .swiper-slide img {
-  max-height: 150px;
-  object-fit: contain;
-  width: auto;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

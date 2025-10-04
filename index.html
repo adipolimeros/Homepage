@@ -246,7 +246,7 @@
         <!-- Servicio 1 -->
         <div class="col-md-4">
             <div class="service-card h-100 p-4">
-                <h5 class="fw-bold">Suminstro e Instalacion</h5>
+                <h5 class="fw-bold">Suministro e Instalacion</h5>
                 <p class="text-secondary" style="color: black !important;">
                     Reviste tu hogar con estilo y calidad incomparables. Expertos en instalación y revestimiento de acabados para un espacio único y acogedor.
                 </p>
@@ -268,7 +268,7 @@
         <!-- Servicio 3 -->
         <div class="col-md-4">
             <div class="service-card h-100 p-4">
-                <h5 class="fw-bold">Reparacion y Mejoraomiento</h5>
+                <h5 class="fw-bold">Reparacion y Mejoramiento</h5>
                 <p class="text-secondary" style="color: black !important;">
                     Renueva el brillo de tus pisos. Expertos en repulido para recuperar los acabados y la elegancia de tus superficies.
                 </p>
@@ -322,26 +322,23 @@
     </div>
 
         <!-- Socios Orgullosos -->
-    <div class="text-center mb-4" id="clientes">
-                <!-- Carrusel de Logos de Clientes -->
-            <div class="text-center mb-4" id="clientes">
-            <h6 class="text-uppercase text-warning">Socios Orgullosos</h6>
-            <h2 class="fw-bold">Trabajamos con clientes reales</h2>
-            </div>
-
-            <div class="swiper logosSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="imagen/marca2IMG_9761.svg" alt="Logo 1"></div>
-                <div class="swiper-slide"><img src="imagen/marca3IMG_9757.svg" alt="Logo 2"></div>
-                <div class="swiper-slide"><img src="imagen/marca4IMG_9759.svg" alt="Logo 3"></div>
-                <div class="swiper-slide"><img src="imagen/marca5IMG_9756.svg" alt="Logo 4"></div>
-                <div class="swiper-slide"><img src="imagen/marca6IMG_9755.svg" alt="Logo 5"></div>
-                <div class="swiper-slide"><img src="imagen/marca7IMG_9760.svg" alt="Logo 6"></div>
-                <div class="swiper-slide"><img src="imagen/marca8IMG_9758.svg" alt="Logo 7"></div>
-                <div class="swiper-slide"><img src="imagen/marcasIMG_9762.svg" alt="Logo 8"></div>
-            </div>
+    <!-- Socios Orgullosos -->
+<div class="text-center mb-4" id="clientes">
+    <h6 class="text-uppercase text-warning">Socios Orgullosos</h6>
+    <h2 class="fw-bold">Trabajamos con clientes reales</h2>
+    <div class="swiper logosSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="imagen/Sanicenter.svg" alt="Logo 1" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/DRRP.svg" alt="Logo 2" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/IMG_9759.svg" alt="Logo 3" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/IMG_9756.svg" alt="Logo 4" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/Rome.svg" alt="Logo 5" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/SP.svg" alt="Logo 6" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/Diseño-Meta.svg" alt="Logo 7" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="imagen/" alt="Logo 8" class="img-fluid"></div>
         </div>
     </div>
+</div>
 
 <footer class="footer bg-dark text-white py-4">
     <div class="container">
@@ -379,6 +376,7 @@
                     <li><a href="#" class="text-white">Nosotros</a></li>
                     <li><a href="#" class="text-white">Políticas de Privacidad</a></li>
                     <li><a href="#" class="text-white">Contacto</a></li>
+                    <li><a href="https://qidcfx1zbotbdw8uoij2kll.blob.core.windows.net/cassinelli/pdf-pegamentos-fraguas-celima/FT_Celima_Fragua_extrafuerte.pdf "  class="text-white">Mas detalles</a></li>
                 </ul>
             </div>
         </div>
@@ -466,7 +464,7 @@
 
   var logosSwiper = new Swiper(".logosSwiper", {
     slidesPerView: 5,
-    spaceBetween: 10,
+    spaceBetween: 20,
     loop: true,
     autoplay: {
       delay: 0, // rotación continua
@@ -474,9 +472,10 @@
     },
     speed: 3000, // velocidad del tren de logos
     breakpoints: {
-      320: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1024: { slidesPerView: 5 },
+       320: { slidesPerView: 2, spaceBetween: 10 }, // Pantallas pequeñas
+        576: { slidesPerView: 3, spaceBetween: 15 }, // Pantallas medianas
+        768: { slidesPerView: 4, spaceBetween: 20 }, // Tablets
+        1024: { slidesPerView: 5, spaceBetween: 20 }, // Pantallas grandes
     },
   });
 </script>
