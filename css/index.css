@@ -127,28 +127,25 @@ body.dark-mode .card-carrusel {
 /* Botón flotante modo oscuro */
 .mode-toggle-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 99999;
+  bottom: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  font-size: 2rem;
-  background: #232323; /* <-- Color fondo botón normal */
-  color: #fff;         /* <-- Color icono luna normal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   border: none;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: pointer;
-  outline: none;
 }
+
 .mode-toggle-btn:hover {
-  background: #7758B3; /* <-- Color fondo botón hover */
-  color: #fff;
-  box-shadow: 0 6px 24px rgba(119,88,179,0.25);
+  background-color: #555;
 }
 .mode-toggle-btn i {
   pointer-events: none;
@@ -474,4 +471,38 @@ body.dark-mode .card-carrusel {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+/* Botón flotante de WhatsApp */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1da851;
+}
+/* Estilo para el nuevo carrusel */
+.marcasSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marcasSwiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 350px; /* Ajusta la altura máxima de las imágenes */
+  object-fit: contain;
 }
