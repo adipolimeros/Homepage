@@ -195,7 +195,7 @@ body.dark-mode .card-carrusel {
     
     /* ***** LO CLAVE PARA AJUSTAR EL TAMAÑO ***** */
     width: 90%; /* Ocupa el 90% del ancho disponible en su contenedor */
-    max-width: 300px; /* Pero nunca superará los 400px de ancho */
+    max-width: 200px; /* Pero nunca superará los 400px de ancho */
     /* ****************************************** */
 }
 /* 2. Media Query para pantallas grandes (Escritorio/Tablet grande) */
