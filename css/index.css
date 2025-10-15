@@ -4,6 +4,20 @@
 .navbar-brand img {
     height: 70px; /* Altura del logo */
 }
+/* Estilo para ajustar el contenido debajo del navbar fixed-top */
+body {
+    /* La clase 'fixed-top' requiere esto. 
+       Ajusta los 56px si tu navbar tiene una altura diferente */
+    padding-top: 100px; 
+}
+
+/* Si tu navbar es más alto en escritorio, puedes usar un media query */
+@media (min-width: 992px) { /* El punto de quiebre 'lg' de Bootstrap */
+    body {
+        /* Ajusta este valor si tu navbar de escritorio es, por ejemplo, 70px */
+        padding-top: 70px; 
+    }
+}
 
 /* =============================
    ENLACES DEL MENÚ DE NAVEGACIÓN
@@ -173,24 +187,29 @@ body.dark-mode .card-carrusel {
 }
 
 .fixed-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 880px;      /* Cambia este valor para ajustar el tamaño del logo */
-    max-width: 60vw;   /* Para que no se pase en pantallas pequeñas */
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; /* El logo no bloquea clics */
+    position: absolute; /* O 'relative', 'fixed' según como lo hayas posicionado */
+    top: 50%; /* O el valor que tengas para posicionarlo verticalmente */
+    left: 50%; /* Para centrarlo horizontalmente */
+    transform: translate(-50%, -50%); /* Para centrarlo correctamente */
+    z-index: 10; /* Asegura que esté por encima del carrusel */
+    
+    /* ***** LO CLAVE PARA AJUSTAR EL TAMAÑO ***** */
+    width: 90%; /* Ocupa el 90% del ancho disponible en su contenedor */
+    max-width: 300px; /* Pero nunca superará los 400px de ancho */
+    /* ****************************************** */
+}
+/* 2. Media Query para pantallas grandes (Escritorio/Tablet grande) */
+/* Aplicamos un ancho mínimo de 768px (un punto de quiebre común) */
+@media (min-width: 768px) { 
+    .fixed-image {
+        /* Tamaño para escritorio: 800px */
+        max-width: 800px;
+    }
 }
 
 .fixed-image img {
-    width: 100%;
+     max-width: 100%; /* Asegura que la imagen no se desborde de su contenedor padre (.fixed-image) */
     height: auto;
-    object-fit: contain;
 }
 /* Permite posicionar elementos hijos como .overlay y .fixed-image */
 .carousel-inner {
@@ -365,7 +384,7 @@ body.dark-mode .card-carrusel {
 
 /* Títulos de tarjetas genéricas */
 .card h5 {
-    color: #000;
+    color: #694e9d;
 }
 
 /* Párrafos de tarjetas genéricas */
@@ -399,31 +418,6 @@ body.dark-mode .card-carrusel {
     transform: scale(1.2); /* Aumenta el tamaño */
     box-shadow: 0px 4px 4px black; /* Sombra para efecto 3D */}
 
-/* Contenedor emergente para el código QR */
-.qr-popup {
-    position: fixed;
-    bottom: 80px; /* Espaciado desde la parte inferior */
-    right: 20px; /* Margen desde el borde derecho */
-    width: 200px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    display: none; /* Oculto por defecto */
-    z-index: 999;
-}
-
-/* Imagen del QR adaptada al contenedor */
-.qr-popup img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* Mostrar el QR al pasar el mouse sobre el botón de WhatsApp */
-.whatsapp-float:hover + .qr-popup {
-    display: block;
-}
 .footer {
     background-color: #333; /* Gris oscuro */
     color: #fff;            /* Texto blanco */
@@ -464,6 +458,9 @@ body.dark-mode .card-carrusel {
   display: flex;
   justify-content: center;
   align-items: center;
+    /* Agregado: Define un tamaño fijo para cada contenedor de logo */
+    width: 200px;  /* Ancho fijo para el slide (ajusta si necesitas más espacio) */
+    height: 200px; /* Alto fijo, lo ideal es que sea igual al ancho para hacerlo cuadrado */
 }
 
 .logosSwiper .swiper-slide img {
