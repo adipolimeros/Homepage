@@ -236,7 +236,7 @@ body.dark-mode .card-carrusel {
 
 /* Estilo de los enlaces en los textos del carrusel */
 .carousel-inner .fixed-content a {
-    color: #FFD700; /* Dorado */
+    color: #694e9d; /* Dorado */
     text-decoration: underline;
     font-weight: bold;
 }
@@ -389,7 +389,7 @@ body.dark-mode .card-carrusel {
 
 /* Párrafos de tarjetas genéricas */
 .card p {
-    color: #ffc107; /* Amarillo Bootstrap (Warning) */
+    color: #694e9d; /* Amarillo Bootstrap (Warning) */
 }
 /* Animación personalizada para la carta */
 #carta {
@@ -503,3 +503,4 @@ body.dark-mode .card-carrusel {
   max-height: 350px; /* Ajusta la altura máxima de las imágenes */
   object-fit: contain;
 }
+/*Ajuste de tamaño de logos*/
