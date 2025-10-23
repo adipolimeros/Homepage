@@ -503,4 +503,66 @@ body.dark-mode .card-carrusel {
   max-height: 350px; /* Ajusta la altura máxima de las imágenes */
   object-fit: contain;
 }
-/*Ajuste de tamaño de logos*/
+/*Ajuste de tamaño de tarjetas de servicios*/
+/* Esto se aplica a la COLUMNA que contiene la tarjeta */
+.custom-card-width {
+    max-width: 550px !important; /* Ajusta este valor según el tamaño deseado */
+}
+/*Ajuste carrousel Seccion Nosotros*/
+/* Contenedor principal que establecerá la altura en base al ancho */
+.carousel-rectangular {
+    position: relative;
+    width: 100%;
+    /* 56.25% es el padding vertical para lograr una relación de aspecto 16:9 (altura = 56.25% del ancho) */
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden; /* Oculta cualquier cosa que se salga del contenedor */
+}
+
+/* El contenido del carrusel debe ser posicionado de forma absoluta dentro del contenedor */
+.carousel-rectangular .carousel-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Asegura que las imágenes llenen el espacio sin estirarse, recortando si es necesario */
+.carousel-rectangular .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre el espacio */
+}
+
+/* Opcional: Para mantener los controles del carrusel */
+.carousel-rectangular .carousel-control-prev,
+.carousel-rectangular .carousel-control-next {
+    /* Asegura que los controles también estén dentro del área 16:9 */
+    height: 100%; 
+    width: 15%; /* Opcional: más angosto */
+}
+/* Limita la altura de los logos y asegura que mantengan su proporción */
+/* Limita la altura de los logos y asegura que mantengan su proporción */
+/* 1. Unificación de Altura: Crucial para que todos los contenedores de imagen sean iguales */
+.marcasSwiper .swiper-slide img {
+    max-height: 420px !important; /* Usamos !important para anular cualquier estilo de Bootstrap/Swiper */
+    width: auto !important;
+    object-fit: contain !important; 
+}
+/* Centra el contenido (la imagen) dentro de cada slide */
+/* 2. Centrado Flexbox: Fuerza el centrado vertical y horizontal */
+.marcasSwiper .swiper-slide {
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;    
+    /* Nota: Si el borde se ve cuadrado y la imagen es más pequeña, está bien. */
+}
+.logo-plus-terrazo {
+    /* Ajusta este valor (ej. 15px, 20px) hasta que se alinee con las demás. */
+    margin-top: 20px !important; 
+}
+.logo-Terramix {
+    /* Ajusta este valor (ej. 15px, 20px) hasta que se alinee con las demás. */
+    margin-top: 10px !important; 
+}
